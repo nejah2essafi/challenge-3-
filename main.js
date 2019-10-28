@@ -12,10 +12,37 @@
 //lets make an employee profile using closures
 
 function employee(name, salary) {
+		var result = salary
+		var obj = {};
+		var friend=[]
+		
     return {
         name: name,
-        salary: salary
-    }
+        salary: salary,
+        sayMyName:function() {
+        	return name;
+        },
+        sayHello:function() {
+        	return "hello "+ name;
+        },
+        increaseSalary: function(n) {
+        	 result+=  n;
+        	 return "your salary is "+result+"$";
+        },
+        addFriend:function(obj) {
+        	friend.push(obj.name)
+        	return "you just became friend with "+friend.join(" and ")
+        },
+        listFriends: function() {
+        	return "you have  "+ friend.length+ " friends";
+        }
+
+
+
+
+
+
+    };
 }
 
 var employeeA = employee("jack", 100);
@@ -24,6 +51,7 @@ var employeeC = employee("Sara", 150);
 
 
 //create a function when invoked returns the name of that employee.
+
 
 // employeeA.sayMyName(); // "jack"
 // employeeB.sayMyName(); // "Mark"
@@ -69,9 +97,32 @@ var employeeC = employee("Sara", 150);
 
 
 // Write your code here .....
+function Pet() {
+	var pet = {};
+	pet.name = ""; 
+	pet.addInfo = addInfo;
+	pet.Increase= Increase; 
+	pet.availability= false;
+	pet.changeState=changeState;
+
+}
+var addInfo = function (age, owner, gender, species){
+	var that = this
+	this.addInfo= 
+};
+var Increase =function(n) {
+	return this.age += n
+};
+var changeState =function (){
+	if (this.availability !== this.availability)
+};
+
+
+
 
 
 // Now, to make sure that you are actually reading, make a comment below this and type: Yes I am
+// yes i'am
 
 //=============================================================================
 /*                                  Q3                                       */
@@ -99,11 +150,22 @@ function reduce(array, f, acc) {
     return acc;
 }
 
+
+
 // Use the updated version of reduce to write a function max that returns the maximum number in an array of numbers. 
 
 // Write your code here .....
 
+function max (array){
+	return reduce (array, function(acc,element){
+		 if (acc < element) {
+			acc=element
+			return acc
+		}
 
+	})
+
+}
 
 
 //================================================================================
