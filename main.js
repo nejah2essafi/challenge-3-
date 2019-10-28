@@ -104,10 +104,11 @@ function Pet() {
 	pet.Increase= Increase; 
 	pet.availability= false;
 	pet.changeState=changeState;
+    return pet
 
 }
 var addInfo = function (age, owner, gender, species){
-	var that = this
+	
 	this.addInfo= 
 };
 var Increase =function(n) {
@@ -160,8 +161,9 @@ function max (array){
 	return reduce (array, function(acc,element){
 		 if (acc < element) {
 			acc=element
-			return acc
+			
 		}
+        return acc
 
 	})
 
