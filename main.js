@@ -115,7 +115,7 @@ var Increase =function(n) {
 	return this.age += n
 };
 var changeState =function (){
-	if (this.availability !== this.availability)
+	return (this.availability !== this.availability)
 };
 
 
